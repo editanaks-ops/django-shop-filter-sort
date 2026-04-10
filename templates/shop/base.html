@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Магазин{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'product_list' %}">Каталог товаров</a></li>
+                <li><a href="{% url 'recent_orders' %}">Заказы за последние 30 дней</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>© 2026 Ваш магазин</p>
+    </footer>
+</body>
+</html>
